@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, Share } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons'; // Importando a biblioteca de ícones
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const PostDetailScreen = ({ route, navigation }) => {
   const { post } = route.params;
@@ -8,16 +8,16 @@ const PostDetailScreen = ({ route, navigation }) => {
   const [commentText, setCommentText] = useState('');
 
   const handleCommentSubmit = () => {
-    if (commentText.trim() === '') return; // Ignorar comentários vazios
-    const newComment = { text: commentText, username: 'Você' }; // Substitua 'Você' pelo nome do usuário atual
+    if (commentText.trim() === '') return;
+    const newComment = { text: commentText, username: 'Você' };
     setComments([...comments, newComment]);
-    setCommentText(''); // Limpa o campo de comentário
+    setCommentText('');
   };
 
   const handleShare = async () => {
     try {
       await Share.share({
-        message: 'Confira este post: ' + post.text, // Personalize a mensagem
+        message: 'Confira este post: ' + post.text,
       });
     } catch (error) {
       alert(error.message);
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFA500',
     padding: 5,
     borderRadius: 5,
-    alignSelf: 'flex-start', // Para alinhar à esquerda
+    alignSelf: 'flex-start',
   },
   postHeader: { flexDirection: 'row', alignItems: 'center' },
   profilePic: { width: 40, height: 40, borderRadius: 20, marginRight: 10 },
