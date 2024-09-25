@@ -4,8 +4,7 @@ import { View, Text, Image, StyleSheet, Animated } from 'react-native';
 const SplashScreen = ({ navigation }) => {
   const scaleValue = useRef(new Animated.Value(1)).current;
 
-  useEffect(() => {
-    // Animação de escala
+  useEffect(() => { // Largar programação pra virar animador de tela, se bem que isso tbm é programação... oh deus
     Animated.sequence([
       Animated.timing(scaleValue, {
         toValue: 1.2,
