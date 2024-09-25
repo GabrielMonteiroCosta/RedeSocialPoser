@@ -123,8 +123,8 @@ const FeedScreen = ({ navigation, route }) => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor: '#fff' }, // Fundo laranja
-  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 10, color: '#fff' }, // Título em branco
+  container: { flex: 1, justifyContent: 'flex-start', alignItems: 'center', backgroundColor: '#fff' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 10, color: '#fff' },
   post: {
     marginBottom: 20,
     padding: 10,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   username: { fontWeight: 'bold' },
-  verifiedIcon: { marginLeft: 5 }, // Estilo para o ícone de verificação
+  verifiedIcon: { marginLeft: 5 },
   postText: { marginVertical: 10 },
   postImage: {
     width: '100%',
@@ -153,9 +153,9 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   interaction: { marginTop: 10 },
-  likeButton: { color: '#007BFF', marginBottom: 10 }, // Cor do botão de curtir
+  likeButton: { color: '#007BFF', marginBottom: 10 },
   commentInput: {
-    borderColor: '#FFA500', // Cor da borda laranja
+    borderColor: '#FFA500',
     borderWidth: 1,
     borderRadius: 5,
     padding: 5,
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
     right: 30,
   },
   floatingButton: {
-    backgroundColor: '#FF4500', // Cor do botão de criar postagem
+    backgroundColor: '#FF4500',
     borderRadius: 30,
     padding: 10,
     marginRight: 10,
