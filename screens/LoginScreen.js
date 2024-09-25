@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, TouchableOpacity, Text, StyleSheet, Image, Alert } from 'react-native';
 
-// Lista de usuários fictícios
 const USERS = [
   { username: 'Gabriel', password: 'senha123', profilePic: require('../assets/fotoDePerfil.png') },
   { username: 'luffy', password: '123456', profilePic: require('../assets/luffy.jpg') },
@@ -17,7 +16,7 @@ const LoginScreen = ({ navigation }) => {
     if (user) {
       navigation.replace('Feed', { user }); // Navega para o Feed com o usuário autenticado
     } else {
-      Alert.alert('Login Inválido', 'Usuário ou senha incorretos.'); // Alerta para login inválido
+      Alert.alert('Login Inválido', 'Usuário ou senha incorretos.');
     }
   };
 
@@ -49,31 +48,31 @@ const styles = StyleSheet.create({
     flex: 1, 
     justifyContent: 'center', 
     alignItems: 'center', 
-    backgroundColor: '#fff', // Cor de fundo laranja
+    backgroundColor: '#fff',
     padding: 20 
   },
   logo: {
-    width: 150, // Tamanho da logo
+    width: 150,
     height: 150,
-    marginBottom: 40, // Espaçamento abaixo da imagem
+    marginBottom: 40,
   },
   input: {
     height: 50,
-    borderColor: '#fff', // Cor da borda branca para contrastar
+    borderColor: '#fff',
     borderWidth: 1,
     borderRadius: 5,
     marginBottom: 15,
     paddingHorizontal: 10,
-    width: '100%', // Preencher toda a largura
-    backgroundColor: '#fff', // Fundo dos inputs branco
+    width: '100%',
+    backgroundColor: '#fff',
   },
   button: {
-    backgroundColor: '#FFA500', // Cor do botão
+    backgroundColor: '#FFA500',
     borderRadius: 5,
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%', // Preencher toda a largura
+    width: '100%',
   },
   buttonText: { color: '#fff', fontSize: 16 },
 });
