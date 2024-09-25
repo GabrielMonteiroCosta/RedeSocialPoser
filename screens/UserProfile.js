@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 const UserProfile = ({ route, navigation }) => {
-  const { userProfile } = route.params; // Recebe os dados do usuário
+  const { userProfile } = route.params;
 
   return (
     <View style={styles.container}>
