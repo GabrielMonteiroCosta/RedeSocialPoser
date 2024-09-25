@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Picker, Image } fr
 import { launchImageLibrary } from 'react-native-image-picker';
 
 const CreatePostScreen = ({ navigation, route }) => {
-  const { setData } = route.params; // Recebe a função para atualizar o feed
+  const { setData } = route.params;
   const [content, setContent] = useState('');
   const [category, setCategory] = useState('pessoal');
   const [image, setImage] = useState(null);
@@ -15,7 +15,7 @@ const CreatePostScreen = ({ navigation, route }) => {
       } else if (response.error) {
         console.log('ImagePicker Error: ', response.error);
       } else {
-        setImage(response.assets[0].uri); // Acessa a URI da imagem
+        setImage(response.assets[0].uri);
       }
     });
   };
@@ -27,17 +27,17 @@ const CreatePostScreen = ({ navigation, route }) => {
     }
 
     const newPost = {
-      id: Math.random().toString(), // Gera um ID único
-      username: 'Você', // Substitua pelo nome do usuário atual
-      profilePic: require('../assets/fotoDePerfil.png'), // Coloque uma imagem padrão ou escolha uma
+      id: Math.random().toString(),
+      username: 'Você',
+      profilePic: require('../assets/fotoDePerfil.png'),
       text: content,
-      image: { uri: image }, // Imagem selecionada
+      image: { uri: image },
       likes: 0,
       comments: [],
     };
 
-    setData(prevData => [...prevData, newPost]); // Adiciona nova postagem ao feed
-    navigation.goBack(); // Navega de volta para o feed
+    setData(prevData => [...prevData, newPost]);
+    navigation.goBack();
   };
 
   return (
@@ -57,7 +57,6 @@ const CreatePostScreen = ({ navigation, route }) => {
         <Picker.Item label="Pessoal" value="pessoal" />
         <Picker.Item label="Profissional" value="profissional" />
         <Picker.Item label="Memes" value="memes" />
-        {/* Adicione mais categorias conforme necessário */}
       </Picker>
       <TouchableOpacity style={styles.imageButton} onPress={handleSelectImage}>
         <Text style={styles.imageButtonText}>Selecionar Imagem</Text>
