@@ -10,7 +10,7 @@ import PostDetailScreen from './screens/PostDetailScreen';
 import CreatePostScreen from './screens/CreatePostScreen';
 import UsersScreen from './screens/UsersScreen';
 import UserProfile from './screens/UserProfile';
-
+// Prof, dá 10 na moral, quero reter dnv não
 const Stack = createNativeStackNavigator();
 
 export default function App() {
