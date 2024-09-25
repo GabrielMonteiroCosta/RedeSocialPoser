@@ -16,7 +16,7 @@ const ProfileScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  title: { fontSize: width * 0.06, fontWeight: 'bold' }, // Responsivo
+  title: { fontSize: width * 0.06, fontWeight: 'bold' },
   backButton: {
     padding: 10,
     backgroundColor: '#007BFF',
