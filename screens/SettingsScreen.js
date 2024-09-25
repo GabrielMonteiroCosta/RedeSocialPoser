@@ -3,11 +3,9 @@ import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 
 const SettingsScreen = ({ route, navigation }) => {
   const { user } = route.params; // Recebe os dados do usuário
-  const [username, setUsername] = useState(user.username); // Armazena o nome atual
+  const [username, setUsername] = useState(user.username); // Armazena o nome atual nessa caceta
 
   const handleSave = () => {
-    // Lógica para salvar o novo nome (por enquanto só vamos voltar)
-    // Aqui você poderia adicionar uma lógica para atualizar o usuário em um banco de dados ou estado global
     navigation.goBack();
   };
 
