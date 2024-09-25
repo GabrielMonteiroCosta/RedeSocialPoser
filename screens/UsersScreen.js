@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons'; // Importando a biblioteca de ícones
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const UsersScreen = ({ route, navigation }) => {
-  const { user, userPosts } = route.params; // Recebe os dados do usuário e as postagens
-  const userRelatedPosts = userPosts.filter(post => post.username === user.username); // Filtra as postagens do usuário
+  const { user, userPosts } = route.params;
+  const userRelatedPosts = userPosts.filter(post => post.username === user.username);
 
   return (
     <View style={styles.container}>
