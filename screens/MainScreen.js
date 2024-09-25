@@ -4,9 +4,9 @@ import { View, Text, StyleSheet } from 'react-native';
 const MainScreen = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tela Principal</Text>
-    </View>
-  );
+      <Text style={styles.title}>Tela Principal</Text> 
+    </View> 
+  ); // Depois continuar 
 };
 
 const styles = StyleSheet.create({
